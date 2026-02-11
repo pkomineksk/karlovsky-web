@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karlovsky | 3D Creative Lab</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --dark-blue: #050a14;
+            --navy-blue: #0a192f;
+            --gold: #d4af37;
+            --gold-light: #f1d37e;
+            --text-white: #ffffff;
+            --text-gray: #a8b2d1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: var(--dark-blue);
+            color: var(--text-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigácia */
+        nav {
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(5, 10, 20, 0.95);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-area img {
+            height: 40px;
+        }
+
+        .brand-text {
+            color: var(--gold);
+            font-weight: 900;
+            letter-spacing: 2px;
+            font-size: 1.2rem;
+        }
+
+        /* Hero Sekcia */
+        .hero {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle, rgba(20, 45, 90, 1) 0%, rgba(5, 10, 20, 1) 100%);
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            color: var(--gold);
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            letter-spacing: 5px;
+            text-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+        }
+
+        .hero p {
+            color: var(--text-gray);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+
+        /* Karty s projektmi */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--navy-blue);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            transition: 0.4s ease;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .card i {
+            font-size: 3.5rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            color: var(--gold-light);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            color: var(--text-gray);
+        }
+
+        /* Príbeh / About */
+        .story {
+            background: #070d1a;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .story-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .story h3 {
+            color: var(--gold);
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px;
+            text-align: center;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        .gold-line {
+            width: 50px;
+            height: 3px;
+            background: var(--gold);
+            margin: 20px auto;
+        }
+
+        /* Responzivita */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo-area">
+            <img src="logo.png" alt="M Logo">
+            <span class="brand-text">KARLOVSKY</span>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>MARIO</h1>
+        <p>Turning bold ideas into 3D reality. Master builder, innovator, and creator.</p>
+        <div class="gold-line"></div>
+    </section>
+
+    <div class="container">
+        <div class="section-title">
+            <h2>Creative Lab</h2>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-print"></i>
+                <h3>3D Printing</h3>
+                <p>Precision manufacturing on the Creality K1. Bringing complex designs to life with gold-standard quality.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-monument"></i>
+                <h3>LEGO Engineering</h3>
+                <p>Expert in architectural builds. Famous for the 9,090-piece LEGO Titanic master project.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-otter"></i>
+                <h3>Hamster World</h3>
+                <p>Designing and 3D printing custom accessories for my small furry companions.</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="story">
+        <div class="story-content">
+            <h3>The Story of Mario</h3>
+            <p>At just 9 years old, Mario Karlovský is building the future. From the first LEGO brick to high-speed 3D printing, his passion for detail and innovation drives every project at Karlovsky.sk.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>KARLOVSKY.SK &copy; 2026</p>
+        <p style="color: var(--gold); margin-top: 10px;">Where imagination meets engineering.</p>
+    </footer>
+
+</body>
+</html>
